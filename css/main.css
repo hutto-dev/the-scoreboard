@@ -12,13 +12,15 @@
   display: flex;
   background-color: var(--primary-blue);
   padding: 0.5rem;
+  gap: 5px;
 }
 
-.hamburger-icon {
+.hamburger {
+  width: 25px;
 }
 
 .nav-bar-logo {
-  width: 200px;
+  width: 170px;
 }
 
 .nav {
