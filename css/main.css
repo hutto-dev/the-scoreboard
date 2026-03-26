@@ -73,6 +73,11 @@ section h2 {
   padding: 1rem;
 }
 
+.hero-section {
+  background: #05044E;
+background: linear-gradient(268deg, rgba(5, 4, 78, 1) 5%, rgba(3, 58, 169, 1) 20%, rgba(1, 109, 255, 1) 37%, rgba(251, 0, 192, 1) 66%, rgba(255, 242, 0, 1) 95%);
+}
+
 .hero-logo {
   width: 200px;
 }
