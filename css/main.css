@@ -6,8 +6,16 @@
 * {
   box-sizing: border-box;
   margin: 0;
+  font-family: "Rubik", sans-serif;
 }
 
+h1,
+h2,
+h3 {
+  font-family: "Montserrat", sans-serif;
+}
+
+/********************************* MOBILE *********************************/
 .nav-bar {
   display: flex;
   background-color: var(--primary-blue);
@@ -25,4 +33,26 @@
 
 .nav {
   display: none;
+}
+
+/********************************* TABLET *********************************/
+
+@media (min-width: 768px) {
+}
+
+/********************************* DESKTOP *********************************/
+@media (min-width: 1024px) {
+  .nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 0 1rem;
+  }
+
+  nav a,
+  p {
+    text-decoration: none;
+    color: var(--primary-yellow);
+    font-weight: 400;
+  }
 }
