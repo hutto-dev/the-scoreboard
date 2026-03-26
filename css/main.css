@@ -1,0 +1,26 @@
+:root {
+  --primary-blue: #006cff;
+  --primary-yellow: #fff000;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.nav-bar {
+  display: flex;
+  background-color: var(--primary-blue);
+  padding: 0.5rem;
+}
+
+.hamburger-icon {
+}
+
+.nav-bar-logo {
+  width: 200px;
+}
+
+.nav {
+  display: none;
+}
