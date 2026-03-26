@@ -19,20 +19,38 @@ h3 {
 .nav-bar {
   display: flex;
   background-color: var(--primary-blue);
-  padding: 0.5rem;
+  padding: 0.2rem 1rem;
   gap: 5px;
+  align-items: center;
+}
+
+.left-section {
 }
 
 .hamburger {
   width: 25px;
 }
 
+.logo-section {
+  flex: auto;
+}
+
 .nav-bar-logo {
   width: 210px;
 }
 
+.nav-section {
+}
 .nav {
   display: none;
+}
+
+.right-section {
+}
+
+.user-icon {
+  width: 25px;
+  flex: 1;
 }
 
 /********************************* TABLET *********************************/
