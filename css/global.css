@@ -1,0 +1,47 @@
+:root {
+  --main-blue: #006cff;
+  --main-yellow: #fff000;
+  --main-pink: #fa01c0;
+  --main-purple: #7605ff;
+
+  --neutral-600: #211f32;
+  --neutral-500: #2f2d47;
+  --neutral-400: #5a5873;
+  --neutral-300: #9492aa;
+  --neutral-200: #c3c2d1;
+  --neutral-100: #eaeaee;
+  --neutral-white: #ffffff;
+
+  --light-blue-700: #003785;
+  --light-blue-500: #006cff;
+  --light-blue-300: #3d8cff;
+  --light-yellow-500: #fff200;
+  --light-pink-700: #b9008d;
+  --light-pink-500: #fa01c0;
+  --light-purple-700: #47019a;
+  --light-purple-500: #7605ff;
+  --light-purple-300: #ad6bff;
+
+  --dark-blue-500: #0d70ff;
+  --dark-blue-300: #3d8cff;
+  --dark-yellow-500: #fff200;
+  --dark-yellow-300: #fdff68;
+  --dark-pink-500: #fa01c0;
+  --dark-pink-300: #fe84e3;
+  --dark-purple-400: #9d4dff;
+  --dark-purple-300: #af6fff;
+  --dark-green-500: #26ff84;
+  --dark-orange-500: #fe6f71;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: "Rubik", sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Montserrat", sans-serif;
+}

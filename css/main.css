@@ -1,24 +1,10 @@
-:root {
-  --primary-blue: #006cff;
-  --primary-yellow: #fff000;
-}
+/******************************************************** MOBILE ********************************************************/
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  font-family: "Rubik", sans-serif;
-}
+/*************** NAV BAR ***************/
 
-h1,
-h2,
-h3 {
-  font-family: "Montserrat", sans-serif;
-}
-
-/********************************* MOBILE *********************************/
 .nav-bar {
   display: flex;
-  background-color: var(--primary-blue);
+  background-color: var(--main-blue);
   padding: 0.2rem 1rem;
   gap: 5px;
   align-items: center;
@@ -62,14 +48,34 @@ h3 {
   width: 25px;
   flex: 1;
 }
+/*************** MAIN ***************/
 
-/********************************* TABLET *********************************/
+.hero-section {
+  display: flex;
+  border: 2px solid black;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  margin: 1rem;
+}
+
+.today-section {
+}
+
+.upcoming-section {
+}
+
+.featured-section {
+}
+
+/******************************************************** TABLET ********************************************************/
 
 @media (min-width: 768px) {
 }
 
-/********************************* DESKTOP *********************************/
+/******************************************************** DESKTOP ********************************************************/
+
 @media (min-width: 1024px) {
+  /*************** NAV BAR ***************/
   .nav {
     display: flex;
     align-items: center;
@@ -98,7 +104,7 @@ h3 {
   nav a,
   p {
     text-decoration: none;
-    color: var(--primary-yellow);
+    color: var(--main-yellow);
     font-weight: 400;
   }
 }
