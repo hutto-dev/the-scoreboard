@@ -63,11 +63,18 @@ section h2 {
 .upcoming-section,
 .featured-section {
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
   border-radius: 5px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
   margin: 1rem;
   background-color: white;
+  padding: 1rem;
+}
+
+.hero-logo {
+  width: 200px;
 }
 
 .today-section {
