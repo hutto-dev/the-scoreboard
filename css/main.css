@@ -1,17 +1,20 @@
 /************************************************** MOBILE **************************************************/
 
 body {
-  background-color: #edeef0;
+  background-color: var(--main-blue);
 }
 
 /*************** NAV BAR ***************/
 
 .nav-bar {
   display: flex;
-  background-color: var(--main-blue);
+  background-color: var(--main-yellow);
   padding: 0.2rem 1rem;
   gap: 5px;
   align-items: center;
+  box-shadow:
+    rgba(0, 0, 0, 0.16) 0px 3px 6px,
+    rgba(0, 0, 0, 0.23) 0px 3px 6px;
 
   position: sticky;
   top: 0;
@@ -20,6 +23,8 @@ body {
 }
 
 .left-section {
+  display: flex;
+  align-items: center;
 }
 
 .hamburger {
@@ -46,6 +51,8 @@ body {
 }
 
 .right-section {
+  display: flex;
+  align-items: center;
 }
 
 .user-icon {
@@ -68,21 +75,90 @@ section h2 {
   align-items: center;
   border-radius: 5px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-  margin: 1rem;
+  margin: 1em;
   background-color: white;
-  padding: 1rem;
+  padding: 1em;
 }
 
+/*********** HERO ***********/
 .hero-section {
-  background: #05044E;
-background: linear-gradient(268deg, rgba(5, 4, 78, 1) 5%, rgba(3, 58, 169, 1) 20%, rgba(1, 109, 255, 1) 37%, rgba(251, 0, 192, 1) 66%, rgba(255, 242, 0, 1) 95%);
+  background: #05044e;
+  background: url(../assets/hero-background.svg);
+
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .hero-logo {
-  width: 200px;
+  width: 95%;
+  max-width: 400px;
 }
 
+/*********** TODAY ***********/
+
 .today-section {
+  display: flex;
+  flex-direction: column;
+  background-color: greenyellow;
+  padding: 0 1em;
+}
+
+.title-card {
+  display: flex;
+  width: 100%;
+  border-bottom: 1px solid lightgray;
+  background-color: red;
+}
+
+.card-titles {
+  font-family: "Rubik", sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  padding: 0.5em 0;
+}
+
+.game-card {
+  display: flex;
+  width: 100%;
+  border-bottom: 1px solid lightgray;
+}
+
+.team-section {
+  display: flex;
+  flex-direction: column;
+  flex: 3;
+  background-color: orange;
+}
+
+.away-team,
+.home-team {
+  display: flex;
+}
+
+.logo {
+}
+
+.name {
+}
+
+.record {
+}
+
+.info-section {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  background-color: yellow;
+}
+
+.time {
+}
+
+.status {
+}
+
+.sport {
 }
 
 .upcoming-section {
@@ -128,7 +204,7 @@ background: linear-gradient(268deg, rgba(5, 4, 78, 1) 5%, rgba(3, 58, 169, 1) 20
   nav a,
   p {
     text-decoration: none;
-    color: var(--main-yellow);
+    color: var(--main-blue);
     font-weight: 400;
   }
 }
