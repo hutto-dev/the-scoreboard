@@ -100,7 +100,7 @@ section h2 {
 .today-section {
   display: flex;
   flex-direction: column;
-  background-color: greenyellow;
+
   padding: 0 1em;
 }
 
@@ -108,41 +108,58 @@ section h2 {
   display: flex;
   width: 100%;
   border-bottom: 1px solid lightgray;
-  background-color: red;
 }
 
 .card-titles {
   font-family: "Rubik", sans-serif;
   font-weight: 500;
   font-size: 1rem;
-  padding: 0.5em 0;
+  padding: 0.7em 0;
 }
 
 .game-card {
   display: flex;
   width: 100%;
   border-bottom: 1px solid lightgray;
+  padding: 0.5 0;
 }
 
 .team-section {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  gap: 5px;
   flex: 3;
-  background-color: orange;
 }
 
 .away-team,
 .home-team {
   display: flex;
+  justify-content: space-around;
+  gap: 5px;
 }
 
 .logo {
+  margin-left: 0.5rem;
+}
+
+.team-logo {
+  width: 20px;
 }
 
 .name {
+  display: flex;
+  flex: auto;
 }
 
 .record {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  flex: 1;
+  margin-right: 0.5rem;
+  color: lightgray;
+  font-size: 0.7rem;
 }
 
 .info-section {
