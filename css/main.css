@@ -82,12 +82,24 @@ section h2 {
 
 /*********** HERO ***********/
 .hero-section {
-  background: #05044e;
-  background: url(../assets/hero-background.svg);
+  background: var(--main-blue);
 
+  /* background: url(../assets/hero-background.svg);
   background-position: center;
   background-size: cover;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; */
+
+  /* NEON EFFECT */
+
+  border: 2px solid #fff;
+  padding: 15px;
+  color: #fff;
+  border-radius: 10px;
+  box-shadow:
+    0 0 5px #fff,
+    0 0 10px #fff,
+    0 0 20px #ff00de,
+    0 0 40px #ff00de;
 }
 
 .hero-logo {
@@ -212,7 +224,10 @@ section h2 {
 /************************************************** TABLET **************************************************/
 
 @media (min-width: 768px) {
-  .hero-section,
+  .hero-section {
+    margin: 1em 3em;
+    padding: 1em;
+  }
   .today-section,
   .upcoming-section,
   .featured-section {
@@ -220,29 +235,29 @@ section h2 {
     background-color: white;
     padding: 1em;
   }
-}
 
-.today-section,
-.upcoming-section {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  padding: 0 1em;
-  padding-bottom: 1em;
-}
+  .today-section,
+  .upcoming-section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 0 1em;
+    padding-bottom: 1em;
+  }
 
-.game-card {
-  width: 48%;
-  position: relative;
-}
+  .game-card {
+    width: 48%;
+    position: relative;
+  }
 
-.game-card:nth-child(even) {
-  border-right: 1px solid lightgray;
-  padding-right: 1rem;
-}
-.game-card:last-child,
-.game-card:nth-last-child(2) {
-  border-bottom: none;
+  .game-card:nth-child(even) {
+    border-right: 1px solid lightgray;
+    padding-right: 1rem;
+  }
+  .game-card:last-child,
+  .game-card:nth-last-child(2) {
+    border-bottom: none;
+  }
 }
 /************************************************** DESKTOP *************************************************/
 
