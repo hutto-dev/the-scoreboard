@@ -101,7 +101,6 @@ section h2 {
 .upcoming-section {
   display: flex;
   flex-direction: column;
-
   padding: 0 1em;
 }
 
@@ -181,6 +180,7 @@ section h2 {
   flex-direction: column;
   justify-content: center;
   flex: 1;
+  max-width: 80px;
 
   font-size: 0.7rem;
 }
@@ -212,8 +212,38 @@ section h2 {
 /************************************************** TABLET **************************************************/
 
 @media (min-width: 768px) {
+  .hero-section,
+  .today-section,
+  .upcoming-section,
+  .featured-section {
+    margin: 1em 3em;
+    background-color: white;
+    padding: 1em;
+  }
 }
 
+.today-section,
+.upcoming-section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 0 1em;
+  padding-bottom: 1em;
+}
+
+.game-card {
+  width: 48%;
+  position: relative;
+}
+
+.game-card:nth-child(even) {
+  border-right: 1px solid lightgray;
+  padding-right: 1rem;
+}
+.game-card:last-child,
+.game-card:nth-last-child(2) {
+  border-bottom: none;
+}
 /************************************************** DESKTOP *************************************************/
 
 @media (min-width: 1024px) {
