@@ -10,7 +10,7 @@ body {
   display: flex;
   background-color: var(--main-yellow);
   padding: 0.2rem 1rem;
-  gap: 5px;
+
   align-items: center;
   box-shadow:
     rgba(0, 0, 0, 0.16) 0px 3px 6px,
