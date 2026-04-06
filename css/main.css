@@ -68,6 +68,9 @@ section h2 {
 .hero-section,
 .today-section,
 .upcoming-section,
+.weekly-section,
+.coach-section,
+.myteam-section,
 .featured-section {
   display: flex;
   flex-direction: column;
@@ -110,7 +113,8 @@ section h2 {
 /*********** TODAY & UPCOMING ***********/
 
 .today-section,
-.upcoming-section {
+.upcoming-section,
+.weekly-section {
   display: flex;
   flex-direction: column;
   padding: 0 1em;
@@ -221,6 +225,40 @@ section h2 {
 .featured-section {
 }
 
+/*********** COACHING HUB ***********/
+
+.coach-section {
+}
+
+.link-container {
+  display: flex;
+  justify-content: center;
+
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.coach {
+  justify-content: center;
+  padding-bottom: 10px;
+}
+.quick-link {
+  width: 48%;
+  font-size: 0.8rem;
+  font-weight: 500;
+  padding: 1rem;
+  text-align: center;
+  text-transform: uppercase;
+  color: black;
+  margin-top: 0.5rem;
+  text-decoration: none;
+  border-radius: 5px;
+
+  box-shadow:
+    rgba(0, 0, 0, 0.12) 0px 1px 3px,
+    rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+
 /************************************************** TABLET **************************************************/
 
 @media (min-width: 768px) {
@@ -228,8 +266,12 @@ section h2 {
     margin: 1em 3em;
     padding: 1em;
   }
+
   .today-section,
   .upcoming-section,
+  .weekly-section,
+  .coach-section,
+  .myteam-section,
   .featured-section {
     margin: 1em 3em;
     background-color: white;
@@ -237,7 +279,8 @@ section h2 {
   }
 
   .today-section,
-  .upcoming-section {
+  .upcoming-section,
+  .weekly-section {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
