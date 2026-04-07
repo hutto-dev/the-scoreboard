@@ -85,29 +85,123 @@ section h2 {
 
 /*********** HERO ***********/
 .hero-section {
-  background: var(--main-blue);
-
-  /* background: url(../assets/hero-background.svg);
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat; */
-
-  /* NEON EFFECT */
-
-  border: 2px solid #fff;
-  padding: 15px;
-  color: #fff;
-  border-radius: 10px;
-  box-shadow:
-    0 0 5px #fff,
-    0 0 10px #fff,
-    0 0 20px #ff00de,
-    0 0 40px #ff00de;
+  position: relative;
+  background: transparent;
+  box-shadow: none;
 }
 
 .hero-logo {
-  width: 95%;
+  width: 100%;
   max-width: 400px;
+  position: relative;
+  z-index: 1;
+}
+
+/* COMIC DESIGN */
+
+.comic-brutal-container {
+  --primary-color: #006cff;
+  --secondary-color: #7605ff;
+  --text-color: #000000;
+  --accent-color: #fff000;
+  --panel-color: #ffffff;
+  --shadow-color: rgba(0, 0, 0, 0.75);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.comic-brutal-div {
+  position: relative;
+  font-size: 1.2rem;
+  border: none;
+  background: none;
+  cursor: pointer;
+  padding: 0;
+  transform: rotate(-2deg);
+  transform-origin: center;
+  transition: transform 0.15s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.comic-inner {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--light-pink-500);
+
+  padding: 1.5em 3em;
+  z-index: 3;
+  overflow: hidden;
+  transform: skew(-3deg, 1deg);
+  transition: transform 0.15s cubic-bezier(0.22, 0.61, 0.36, 1);
+  clip-path: polygon(
+    0% 10%,
+    3% 0%,
+    97% 0%,
+    100% 10%,
+    100% 90%,
+    97% 100%,
+    3% 100%,
+    0% 90%
+  );
+}
+
+.comic-text {
+  position: relative;
+  font-weight: 900;
+  font-size: 0.7em;
+  text-transform: uppercase;
+  z-index: 5;
+  color: var(--text-color);
+  text-shadow:
+    0.05em 0.05em 0 var(--panel-color),
+    -0.05em -0.05em 0 var(--panel-color),
+    0.05em -0.05em 0 var(--panel-color),
+    -0.05em 0.05em 0 var(--panel-color);
+  transform: rotate(2deg);
+}
+
+.comic-frame {
+  position: absolute;
+  top: -0.3em;
+  left: -0.3em;
+  right: -0.3em;
+  bottom: -0.3em;
+  background-color: var(--accent-color);
+  border: 0.18em solid var(--text-color);
+
+  border-radius: 10px;
+}
+
+.comic-shadow {
+  position: absolute;
+  top: 0.4em;
+  left: 0.4em;
+  right: -0.4em;
+  bottom: -0.4em;
+  background-color: var(--shadow-color);
+  z-index: 0;
+  transition: all 0.15s cubic-bezier(0.22, 0.61, 0.36, 1);
+  border-radius: 10px;
+}
+
+.halftone-overlay-hero {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background: url(../assets/dot-pattern.svg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: repeat;
+
+  z-index: 2;
+  mix-blend-mode: multiply;
 }
 
 /*********** MY TEAMS ***********/
@@ -558,6 +652,9 @@ section h2 {
   
 } */
 
+.featured-section {
+}
+
 /************************************************** TABLET **************************************************/
 
 @media (min-width: 768px) {
@@ -638,207 +735,3 @@ section h2 {
     text-transform: uppercase;
   }
 }
-
-/* COOL BUTTON CSS & HTML
-
-
-.coachhub-title {
-  color: var(--main-blue);
-  text-transform: uppercase;
-  font-weight: 800;
-  font-size: 1.8rem;
-  padding: 0.1em 0 0.2em 0;
-  font-family: "Rubik", sans-serif;
-}
-.quick-link {
-  --stone-50: #fafaf9;
-  --stone-800: #292524;
-  --yellow-400: #facc15; /* change this if you want a different accent color
-
-  font-family: "Rubik", sans-serif;
-  cursor: pointer;
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
-  line-height: 1;
-  font-size: 0.8rem; /* I lowered it a bit so text fits better 
-  border-radius: 1rem;
-  outline: 2px solid transparent;
-  outline-offset: 6px;
-  color: var(--stone-50);
-  text-decoration: none;
-  width: 45%; /* keep your width 
-  margin-top: 0.5rem;
-}
-
-.quick-link:active {
-  outline-color: var(--yellow-400);
-}
-
-.quick-link:focus-visible {
-  outline-color: var(--yellow-400);
-  outline-style: dashed;
-}
-
-==================== LAYERED EFFECT ==================== 
-
-.quick-link > div {
-  padding: 2px;
-  border-radius: 1rem;
-  background-color: var(--light-pink-500);
-  transform: translate(-4px, -4px);
-  transition: all 150ms ease;
-  box-shadow:
-    0.5px 0.5px 0 0 var(--light-pink-500),
-    1px 1px 0 0 var(--light-pink-500),
-    1.5px 1.5px 0 0 var(--light-pink-500),
-    2px 2px 0 0 var(--light-pink-500),
-    2.5px 2.5px 0 0 var(--light-pink-500),
-    3px 3px 0 0 var(--light-pink-500),
-    0 0 0 2px var(--stone-800),
-    0.5px 0.5px 0 2px var(--stone-800),
-    1px 1px 0 2px var(--stone-800),
-    1.5px 1.5px 0 2px var(--stone-800),
-    2px 2px 0 2px var(--stone-800),
-    2.5px 2.5px 0 2px var(--stone-800),
-    3px 3px 0 2px var(--stone-800),
-    3.5px 3.5px 0 2px var(--stone-800),
-    4px 4px 0 2px var(--stone-800),
-    0 0 0 4px var(--stone-50),
-    0.5px 0.5px 0 4px var(--stone-50),
-    1px 1px 0 4px var(--stone-50),
-    1.5px 1.5px 0 4px var(--stone-50),
-    2px 2px 0 4px var(--stone-50),
-    2.5px 2.5px 0 4px var(--stone-50),
-    3px 3px 0 4px var(--stone-50),
-    3.5px 3.5px 0 4px var(--stone-50),
-    4px 4px 0 4px var(--stone-50);
-}
-
-.quick-link:hover > div {
-  transform: translate(0, 0);
-  box-shadow:
-    0 0 0 0 var(--light-pink-500),
-    0 0 0 0 var(--light-pink-500),
-    0 0 0 0 var(--light-pink-500),
-    0 0 0 0 var(--light-pink-500),
-    0 0 0 0 var(--light-pink-500),
-    0 0 0 0 var(--light-pink-500),
-    0 0 0 2px var(--stone-800),
-    0 0 0 2px var(--stone-800),
-    0 0 0 2px var(--stone-800),
-    0 0 0 2px var(--stone-800),
-    0 0 0 2px var(--stone-800),
-    0 0 0 2px var(--stone-800),
-    0 0 0 2px var(--stone-800),
-    0 0 0 2px var(--stone-800),
-    0 0 0 2px var(--stone-800),
-    0 0 0 4px var(--stone-50),
-    0 0 0 4px var(--stone-50),
-    0 0 0 4px var(--stone-50),
-    0 0 0 4px var(--stone-50),
-    0 0 0 4px var(--stone-50),
-    0 0 0 4px var(--stone-50),
-    0 0 0 4px var(--stone-50),
-    0 0 0 4px var(--stone-50),
-    0 0 0 4px var(--stone-50);
-}
-
-.quick-link > div > div {
-  position: relative;
-  pointer-events: none;
-  border-radius: calc(1rem - 2px);
-  background-color: var(--main-blue);
-}
-
-.quick-link > div > div::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: 1rem;
-  opacity: 0.1;
-  background-image:
-    radial-gradient(rgb(255 255 255 / 80%) 20%, transparent 20%),
-    radial-gradient(rgb(255 255 255 / 100%) 20%, transparent 20%);
-  background-position:
-    0 0,
-    4px 4px;
-  background-size: 8px 8px;
-  mix-blend-mode: hard-light;
-  box-shadow: inset 0 0 0 1px var(--main-blue);
-  animation: dots 0.4s infinite linear;
-}
-
-.quick-link > div > div > div {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0.85rem 1rem;
-  gap: 0.25rem;
-  filter: drop-shadow(0 -1px 0 var(--main-blue));
-  text-align: center;
-}
-
-.quick-link:active > div > div > div {
-  transform: translateY(2px);
-}
-
-/* Animation 
-@keyframes dots {
-  0% {
-    background-position:
-      0 0,
-      4px 4px;
-  }
-  100% {
-    background-position:
-      8px 0,
-      12px 4px;
-  }
-}
-
-html
-
- <section class="coach-section">
-        <div class="title-coach">
-          <h2 class="coachhub-title">Coach Quick Links</h2>
-        </div>
-        <div class="link-container">
-          <a href="#" class="quick-link">
-            <div>
-              <div>
-                <div>Submit Scores</div>
-              </div>
-            </div>
-          </a>
-
-          <a href="#" class="quick-link">
-            <div>
-              <div>
-                <div>Add or Change Game</div>
-              </div>
-            </div>
-          </a>
-
-          <a href="#" class="quick-link">
-            <div>
-              <div>
-                <div>Go to Coach's Hub</div>
-              </div>
-            </div>
-          </a>
-
-          <a href="#" class="quick-link">
-            <div>
-              <div>
-                <div>Something else</div>
-              </div>
-            </div>
-          </a>
-        </div>
-      </section>
-
-*/
