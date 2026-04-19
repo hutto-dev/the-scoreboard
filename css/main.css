@@ -2,61 +2,6 @@ body {
   background-color: var(--main-blue);
 }
 
-/*************** NAV BAR ***************/
-
-.nav-bar {
-  display: flex;
-  background-color: var(--main-yellow);
-  padding: 0.2rem 1rem;
-
-  align-items: center;
-  box-shadow:
-    rgba(0, 0, 0, 0.16) 0px 3px 6px,
-    rgba(0, 0, 0, 0.23) 0px 3px 6px;
-
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  width: 100%;
-}
-
-.left-section {
-  display: flex;
-  align-items: center;
-}
-
-.hamburger {
-  width: 25px;
-}
-
-.ts {
-  display: none;
-}
-
-.logo-section {
-  display: flex;
-  flex: auto;
-}
-
-.nav-bar-logo {
-  width: 210px;
-}
-
-.nav-section {
-}
-.nav {
-  display: none;
-}
-
-.right-section {
-  display: flex;
-  align-items: center;
-}
-
-.user-icon {
-  width: 25px;
-  flex: 1;
-}
 /*************** MAIN ***************/
 
 main {
@@ -81,7 +26,7 @@ section h2 {
   justify-content: center;
   align-items: center;
   border-radius: 5px;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  box-shadow: rgba(0, 0, 0, 0.6) 4px 4px 3.2px;
   background-color: white;
   margin: 1em 0;
   padding: 1em;
@@ -212,26 +157,49 @@ section h2 {
 /*********** MY TEAMS ***********/
 
 .myteam-section {
-  background-color: var(--light-pink-500);
+  gap: 10px;
+  background-color: var(--main-yellow);
   margin: 0;
   padding: 1em;
 }
 
-.myteam-title {
+.myteam-titles,
+.coachhub-title {
   display: flex;
   width: 100%;
-  padding: 0 0 0.2em 0;
+  color: var(--light-pink-500);
+  justify-content: center;
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 1.5rem;
+  padding: 0.1em 0 0.2em 0;
+  font-family: "Rubik", sans-serif;
+}
+
+.coachhub-title {
+  color: var(--main-yellow);
 }
 
 .team-card {
   display: flex;
   justify-content: space-between;
-  padding: 1em 1em;
+  align-items: center;
+  padding: 0.5em 1em;
   width: 100%;
   border-radius: 5px;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-  background-color: rgb(76, 26, 117);
-  color: white;
+  box-shadow: rgba(0, 0, 0, 1) 4px 4px 3.2px;
+  background-color: rgb(160, 73, 231);
+}
+
+.panthers {
+}
+
+.warner {
+  background-color: rgb(93, 93, 255);
+}
+
+.dolphins {
+  background-color: rgb(16, 242, 242);
 }
 
 .myteam-team-section {
@@ -239,7 +207,8 @@ section h2 {
 }
 
 .myteam-name {
-  font-size: 1.5rem;
+  text-transform: uppercase;
+  font-size: 1.2rem;
   font-weight: 500;
 }
 
@@ -270,7 +239,7 @@ section h2 {
 .weekly-section {
   display: flex;
   flex-direction: column;
-  padding: 0 1em;
+  padding: 0 1em 1em;
 }
 
 .title-card {
@@ -396,15 +365,6 @@ section h2 {
 .title-coach {
 }
 
-.coachhub-title {
-  color: var(--main-yellow);
-  text-transform: uppercase;
-  font-weight: 800;
-  font-size: 1.8rem;
-  padding: 0.1em 0 0.2em 0;
-  font-family: "Rubik", sans-serif;
-}
-
 .coaching-link {
   width: 150px;
   text-align: center;
@@ -427,10 +387,43 @@ section h2 {
 
 @media (min-width: 768px) {
   main {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas:
+      "hero hero"
+      "today favs"
+      "upcoming weekly"
+      "featured coach";
     padding: 0 3em;
+    gap: 20px;
   }
   .hero-section {
+    grid-area: hero;
     padding: 1em;
+  }
+
+  .today-section {
+    grid-area: today;
+  }
+
+  .myteam-section {
+    grid-area: favs;
+  }
+
+  .upcoming-section {
+    grid-area: upcoming;
+  }
+
+  .weekly-section {
+    grid-area: weekly;
+  }
+
+  .featured-section {
+    grid-area: featured;
+  }
+
+  .coach-section {
+    grid-area: coach;
   }
 
   .today-section,
@@ -469,40 +462,6 @@ section h2 {
 /******************** DESKTOP **********************/
 
 @media (min-width: 1024px) {
-  /********************** NAV BAR **********************/
-  .nav {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    padding: 0 1rem;
-  }
-
-  .hamburger {
-    display: none;
-  }
-
-  .ts {
-    display: block;
-    width: 40px;
-  }
-  .logo-section {
-    flex: 0 0 auto;
-    display: flex;
-    align-items: center;
-  }
-
-  .nav-section {
-    flex: 2;
-  }
-
-  nav a,
-  p {
-    text-decoration: none;
-    color: var(--main-blue);
-    font-weight: 500;
-    text-transform: uppercase;
-  }
-
   /********************** MAIN **********************/
   main {
   }

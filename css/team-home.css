@@ -1,0 +1,38 @@
+.team-header,
+.schedule-section,
+.roster-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.6) 4px 4px 3.2px;
+  background-color: white;
+  margin: 1em 0;
+  padding: 1em;
+}
+
+.schedule-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.6) 4px 4px 3.2px;
+  background-color: white;
+  margin: 1em 0;
+  padding: 1em;
+}
+
+.roster-section {
+}
+
+/********************* TABLET *************************/
+
+@media (min-width: 768px) {
+}
+
+/******************** DESKTOP **********************/
+
+@media (min-width: 1024px) {
+}

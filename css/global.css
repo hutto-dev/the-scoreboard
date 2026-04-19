@@ -45,3 +45,107 @@ h2,
 h3 {
   font-family: "Montserrat", sans-serif;
 }
+
+/* NAV BAR */
+
+body {
+  background-color: var(--main-blue);
+}
+
+/*************** NAV BAR ***************/
+
+.nav-bar {
+  display: flex;
+  background-color: var(--main-yellow);
+  padding: 0.2rem 1rem;
+
+  align-items: center;
+  box-shadow:
+    rgba(0, 0, 0, 0.16) 0px 3px 6px,
+    rgba(0, 0, 0, 0.23) 0px 3px 6px;
+
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+}
+
+.left-section {
+  display: flex;
+  align-items: center;
+}
+
+.hamburger {
+  width: 25px;
+}
+
+.ts {
+  display: none;
+}
+
+.logo-section {
+  display: flex;
+  flex: auto;
+}
+
+.nav-bar-logo {
+  width: 210px;
+}
+
+.nav-section {
+}
+.nav {
+  display: none;
+}
+
+.right-section {
+  display: flex;
+  align-items: center;
+}
+
+.user-icon {
+  width: 25px;
+  flex: 1;
+}
+
+/************************ TABLET *************************/
+
+@media (min-width: 768px) {
+}
+
+/******************** DESKTOP **********************/
+
+@media (min-width: 1024px) {
+  .nav {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 0 1rem;
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  .ts {
+    display: block;
+    width: 40px;
+  }
+  .logo-section {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+  }
+
+  .nav-section {
+    flex: 2;
+  }
+
+  nav a,
+  p {
+    text-decoration: none;
+    color: var(--main-blue);
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+}
